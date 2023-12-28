@@ -13,6 +13,26 @@
   </head>
   <body>
     <h1>Snake Game</h1>
-    <canvas id="board"></canvas>
+
+    <div id="initial-screen" class="flex">
+      <h1>Snake Game</h1>
+      <button id="play-button">Play Game</button>
+      <button id="exit-button">Exit</button>
+    </div>
+
+    <div id="wrapper" class="hidden">
+      <div class="boxScore">
+        <div class="score-content">
+          <p id="score">Score: 0</p>
+        </div>
+
+        <div class="buttons-content">
+          <button id="try-again" class="hidden">Try again</button>
+          <button id="return-to-menu" class="hidden">Return to menu</button>
+        </div>
+      </div>
+
+      <canvas id="board"></canvas>
+    </div>
   </body>
 </html>

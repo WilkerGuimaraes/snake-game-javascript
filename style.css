@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -11,4 +14,101 @@ body {
   justify-content: space-evenly;
   min-height: 100vh;
   background-color: #d7d7d7;
+}
+
+.flex {
+  display: flex;
+}
+
+#initial-screen {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 600px;
+  background-color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+#initial-screen h1 {
+  font-size: 48px;
+  color: #00ff00;
+  margin-bottom: 30px;
+}
+
+#initial-screen #play-button {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 5px 15px;
+  background-color: #00cc00;
+  border-width: 1px;
+  margin: 20px 0;
+}
+
+#initial-screen #play-button:hover {
+  cursor: pointer;
+  background-color: #00ff00;
+}
+
+#initial-screen #exit-button {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 5px 68px;
+  color: #ffffff;
+  background-color: #a10000;
+  border-width: 1px;
+}
+
+#initial-screen #exit-button:hover {
+  cursor: pointer;
+  background-color: #ff0000;
+}
+
+.wrapper {
+  display: none;
+}
+
+.boxScore {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+}
+
+.boxScore .score-content {
+  font-size: 18px;
+  color: #f1f1f1;
+}
+
+.buttons-content #try-again {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 15px;
+  border-width: 1px;
+  background-color: #00cc00;
+  transition: all 0.2s ease;
+}
+
+#try-again:hover {
+  cursor: pointer;
+  background-color: #00ff00;
+}
+
+.buttons-content #return-to-menu {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 15px;
+  border-width: 1px;
+  color: #f1f1f1;
+  background-color: #a10000;
+}
+
+#return-to-menu:hover {
+  cursor: pointer;
+  background-color: #ff0000;
+  transition: all 0.2s ease;
 }
