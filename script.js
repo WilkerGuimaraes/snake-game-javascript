@@ -156,6 +156,7 @@ function tryAgain() {
     score.textContent = `Score: ${value}`;
     score.style.color = "#F1F1F1";
     gameOver = false;
+    placeFood();
     tryAgainButton.classList.add("hidden");
     returnToMenuButton.classList.add("hidden");
   });
