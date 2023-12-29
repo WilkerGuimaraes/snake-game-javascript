@@ -122,20 +122,29 @@ function update() {
 }
 
 function changeDirection(e) {
-  if (e.code == "ArrowUp" && directionY != 1) {
+  if (e.code === "ArrowUp" && directionY != 1) {
     directionX = 0;
     directionY = -1;
-  } else if (e.code == "ArrowDown" && directionY != -1) {
+  } else if (e.code === "ArrowDown" && directionY != -1) {
     directionX = 0;
     directionY = 1;
-  } else if (e.code == "ArrowLeft" && directionX != 1) {
+  } else if (e.code === "ArrowLeft" && directionX != 1) {
     directionX = -1;
     directionY = 0;
-  } else if (e.code == "ArrowRight" && directionX != -1) {
+  } else if (e.code === "ArrowRight" && directionX != -1) {
     directionX = 1;
     directionY = 0;
   }
 }
+
+// Control arrows
+document.querySelectorAll(".control-arrows i").forEach((key) => {
+  // Calling changeDirection on each key click and passing dataset value as an object
+  key.addEventListener(
+    "click",
+    () => changeDirection({ code: key.dataset.key }) // KeyboardEvent contains the property `code`
+  );
+});
 
 function placeFood() {
   foodX = Math.floor(Math.random() * cols) * blockSize;
@@ -169,3 +178,29 @@ function returnToMenu() {
     location.reload();
   });
 }
+
+// Responsivity
+function handleResize() {
+  let windowWidth = window.innerWidth;
+
+  if (windowWidth === 1024 || windowWidth === 768 || windowWidth === 600) {
+    location.reload();
+    start();
+  }
+
+  if (windowWidth > 1024) {
+    cols = 40;
+  } else if (windowWidth > 768) {
+    cols = 30;
+  } else if (windowWidth > 600) {
+    cols = 24;
+  } else {
+    cols = 16;
+  }
+
+  //start();
+}
+
+window.addEventListener("resize", handleResize);
+
+handleResize();

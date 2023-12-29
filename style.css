@@ -112,3 +112,67 @@ body {
   background-color: #ff0000;
   transition: all 0.2s ease;
 }
+
+.control-arrows {
+  display: none;
+  width: 100%;
+}
+
+.control-arrows > i {
+  font-size: 30px;
+  padding: 10px 32px;
+  border-radius: 3px;
+  border: none;
+  color: #ddd;
+  background-color: #222;
+}
+
+.control-arrows:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  #initial-screen,
+  #wrapper {
+    width: 750px;
+  }
+
+  .control-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .control-arrows > i {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #initial-screen,
+  #wrapper {
+    width: 600px;
+  }
+
+  .control-arrows > i {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #initial-screen,
+  #wrapper {
+    width: 400px;
+  }
+
+  body {
+    justify-content: center;
+  }
+
+  .control-arrows > i {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
