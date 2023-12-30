@@ -190,15 +190,17 @@ function handleResize() {
 
   if (windowWidth > 1024) {
     cols = 40;
+    rows = 24;
   } else if (windowWidth > 768) {
     cols = 30;
+    rows = 19;
   } else if (windowWidth > 600) {
     cols = 24;
+    rows = 16;
   } else {
     cols = 16;
+    rows = 18;
   }
-
-  //start();
 }
 
 window.addEventListener("resize", handleResize);

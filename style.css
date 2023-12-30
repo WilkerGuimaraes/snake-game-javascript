@@ -27,6 +27,7 @@ body {
   width: 1000px;
   height: 600px;
   background-color: #222;
+  border-radius: 5px;
 }
 
 .hidden {
@@ -162,13 +163,27 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    justify-content: center;
+  }
+
   #initial-screen,
   #wrapper {
     width: 400px;
   }
 
-  body {
-    justify-content: center;
+  #initial-screen > h1 {
+    font-size: 38px;
+  }
+
+  #initial-screen #play-button {
+    font-size: 24px;
+    padding: 5px 10px;
+  }
+
+  #initial-screen #exit-button {
+    font-size: 24px;
+    padding: 5px 55px;
   }
 
   .control-arrows > i {
